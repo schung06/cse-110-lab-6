@@ -1,6 +1,8 @@
 // RecipeCard.js
 
 class RecipeCard extends HTMLElement {
+	// Called once when document.createElement('recipe-card') is called, or
+	// the element is written into the DOM directly as <recipe-card>
 	constructor() {
 		super(); // Inherit everything from HTMLElement
 
@@ -124,7 +126,7 @@ class RecipeCard extends HTMLElement {
 		if (!data) return;
 
 		// A6. TODO - Select the <article> we added to the Shadow DOM in the constructor
-		const article = this.article;
+		const article = this.shadowRoot.querySelector('article');
 
 		// A7. TODO - Set the contents of the <article> with the <article> template given in
 		//           cardTemplate.html and the data passed in (You should only have one <article>,
